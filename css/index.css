@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@font-face {
+  	font-family: 'MarkSans';
+	src: 
+		url('../fonts/marksans.woff2') format('woff2'),
+       	url('../fonts/marksans.ttf') format('truetype');
+	font-weight: normal;
+    font-style: normal;
+
+}
+
+*{
+	font-family: 'MarkSans';
+}
+
+body {
+	background-color: #fff2e3;
+	overflow: hidden;
+}
+
+h1{
+	color: #6e9380;
+	text-transform: uppercase;
+}
+
+p{
+	font-family: 'Open Sans';
+	color: #3c6567;
+}
+
+a{
+	margin-right: 10px;
+	color: #b2c6a3;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+a:hover{
+	color: #6e9380;
+	text-decoration: none;
+}
+
+.mainLogo{
+	height: 145px;
+	background: url(../img/logo.png) no-repeat center;
+	background-size: contain;
+	margin-top: 30px;
+}
+
+.background{
+	z-index: -10;
+	width: 5121px;
+	position: absolute;
+	top: 0;
+	left: calc(50% - 2560px);
+	overflow: hidden;
+
+}
