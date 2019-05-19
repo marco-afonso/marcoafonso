@@ -1,0 +1,43 @@
+$default-font: 'Open Sans';
+$brand-font: 'MarkSans';
+$brand-white: #FFF2E3;
+$brand-blue: #172633;
+$brand-light-blue: #3C6567;
+$brand-green: #6E9380;
+$brand-light-green: #B2C6A3;
+
+$responsive-xs: "only screen and (min-width : 480px)";
+$responsive-sm: "only screen and (min-width : 768px)";
+$responsive-md: "only screen and (min-width : 992px)";
+$responsive-lg: "only screen and (min-width : 1200px)";
+
+$responsive-up-to-xs: "only screen and (max-width : 479px)";
+$responsive-up-to-sm: "only screen and (max-width : 767px)";
+$responsive-up-to-md: "only screen and (max-width : 991px)";
+$responsive-up-to-lg: "only screen and (max-width : 1199px)";
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@font-face {
+  	font-family: 'MarkSans';
+	src: 
+		url('../fonts/marksans.woff2') format('woff2'),
+       	url('../fonts/marksans.ttf') format('truetype');
+	font-weight: normal;
+    font-style: normal;
+
+}
+
+html{
+	font-family: $default-font;
+	font-size: 14px;
+}
+*{
+	color: $brand-light-blue;
+}
+
+.img-container {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}

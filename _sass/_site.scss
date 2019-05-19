@@ -1,0 +1,40 @@
+.page-body{
+	background-color: $brand-white;
+	min-height: calc(100vh - 100px);
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+}
+
+.page-frame{
+	height: 100vh;
+
+}
+
+a{
+	color: $brand-light-green;
+	&:hover{
+		text-decoration: underline; 
+		color: $brand-light-green;
+	}
+}
+
+p{
+	font-size: 13px;
+	line-height: 1.2em;
+	color: mix($brand-light-blue, $brand-white, 75%);
+}
+
+h1, h2, h3, h4{ 
+	font-family: $brand-font; 
+	text-transform: uppercase;
+	line-height: 1.1em;
+	padding: 0.6em 0 0.2em;
+	margin: 10px 0 5px;
+}
+
+
+h1{ font-size: 28px;  color: $brand-green;			}
+h2{	font-size: 24px;  color: $brand-light-green;	}
+h3{	font-size: 20px; 								}
+h4{	font-size: 16px; 								}
