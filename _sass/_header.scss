@@ -27,7 +27,8 @@ header {
 			display: block;
 			float: right;
 			height: 100px;
-			width: 20px;
+			width: 60px;
+			padding: 20px;
 		}
 		ul{
 			animation: slide-from-above 0.2s cubic-bezier(.35,.91,.7,.99);
@@ -51,6 +52,7 @@ header {
 			}
 		}
 	}
+
 		
 	.header-logo{
 		float: left;
@@ -59,7 +61,7 @@ header {
 		width: auto;
 		img{
 			position: relative;
-			left: -10px;
+			left: -5px;
 			height: 65px;
 			margin-top: 15px;
 			display: inline-block;
@@ -70,10 +72,22 @@ header {
 			display: inline-block;
 			position: relative;
 			bottom: 35px;
-			left: 8px;
 			font-size: inherit;
 			color: $brand-white;
 
+		}
+	}
+	@media #{ $responsive-up-to-xxs } /*ADJUSTMENTS IN SMALLEST WIDTH*/ {
+		.header-logo{
+			img{
+				display: none;
+			}
+		}
+		p{
+			top: 33px;
+			left: 10px;
+			width: auto;
+			font-size: inherit;
 		}
 	}
 }
