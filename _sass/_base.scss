@@ -6,6 +6,8 @@ $brand-light-blue: #3C6567;
 $brand-green: #6E9380;
 $brand-light-green: #B2C6A3;
 
+$text-body-color: mix($brand-light-blue, $brand-white, 75%);
+
 $responsive-xxs: "only screen and (min-width : 295px)";
 $responsive-xs: "only screen and (min-width : 480px)";
 $responsive-sm: "only screen and (min-width : 768px)";

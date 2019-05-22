@@ -4,4 +4,17 @@ footer{
 	p{
 		color: $brand-white;
 	}
+	ul{
+		display: inline-block;
+		li{
+			display: inline-block;
+			margin: 5px 0;
+			margin-right: 10px;
+		}
+	}
+	ul.footer-links{
+		a{
+				color: $brand-green;
+		}
+	}
 }
