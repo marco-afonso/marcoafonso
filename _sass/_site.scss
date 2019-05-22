@@ -1,10 +1,9 @@
 .page-body{
 	background-color: $brand-white;
 	min-height: calc(100vh - 100px);
-	padding-top: 50px;
-	padding-bottom: 50px;
 
 }
+footer, .page-body {padding: 50px 20px;}
 
 .page-frame{
 	height: 100vh;
