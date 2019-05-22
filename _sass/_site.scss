@@ -1,9 +1,11 @@
 .page-body{
 	background-color: $brand-white;
 	min-height: calc(100vh - 100px);
-
+	padding: 40px 10px 60px;
 }
-footer, .page-body {padding: 50px 40px;}
+footer {
+	padding: 40px 10px;
+}
 
 .page-frame{
 	height: 100vh;
@@ -21,7 +23,7 @@ a{
 p, .page-body ul{
 	padding: 0.4em 0;
 	font-size: 13px;
-	line-height: 1.3em;
+	line-height: 1.4em;
 	color: $text-body-color;
 }
 .page-body ul li {
