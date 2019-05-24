@@ -1,0 +1,15 @@
+.background-triangle{
+	position: relative;
+	top: -1px;
+	left: 0;
+	width: 100%;
+	height: calc(100vh - 200px);
+	fill: $brand-light-blue;
+
+
+}
+.triangle-wrapper{
+	height: 0;
+	overflow: visible;
+	width: 100vw;
+}
