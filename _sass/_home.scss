@@ -1,15 +1,23 @@
-.background-triangle{
+.home-satina-wrapper{
+
 	position: relative;
-	top: -1px;
-	left: 0;
-	width: 100%;
-	height: calc(100vh - 200px);
-	fill: $brand-light-blue;
-
-
+	margin-top: 10px;
+	margin-bottom: 40px;
 }
-.triangle-wrapper{
-	height: 0;
-	overflow: visible;
-	width: 100vw;
+.home-satina-bag{
+	position: relative;
+	top: 0;
+	left: -5%;
+	width: 95%;
+}
+.home-satina-ipad{
+	position: absolute;
+	width: 95%;
+	left: 20%;
+}
+.home-satina-text{
+	@media #{ $responsive-xs } {
+		margin-top: 50vh;
+		padding-left: 20px;
+	}
 }

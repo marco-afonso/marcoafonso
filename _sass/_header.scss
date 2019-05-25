@@ -86,6 +86,8 @@ header {
 			bottom: 35px;
 			font-size: inherit;
 			color: $brand-white;
+			margin: 0;
+			padding: 0;
 
 		}
 	}
@@ -95,7 +97,7 @@ header {
 				display: none;
 			}
 			p{
-				top: 33px;
+				top: 31px;
 				left: 10px;
 				width: auto;
 				font-size: inherit;
