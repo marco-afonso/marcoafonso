@@ -95,7 +95,7 @@ h4{	font-size: 16px; 								}
 	color: $brand-green;
 	border-width: 3px;
 	border-style: solid;	
-	&:hover{
+	&:hover, &:active{
 		color: $brand-white;
 		background-color: $brand-green;
 		text-decoration: none;
