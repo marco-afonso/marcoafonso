@@ -16,9 +16,6 @@ footer {
 
 	padding: 40px 10px;
 }
-body{
-	background-color: $brand-light-green;
-}
 
 .page-frame{
 	background-color: $brand-white;
@@ -69,7 +66,13 @@ h4{	font-size: 16px; 								}
 	left: 0;
 	width: 100%;
 	min-height: 400px;
-	max-height: 800px;
+	@media #{ $responsive-up-to-sm } {
+		min-height: 100px;
+		max-height: 400px; 
+		height: 70vw;
+	}
+
+	max-height: 700px;
 	height: calc(100vh - 200px);
 	fill: $brand-light-blue;
 

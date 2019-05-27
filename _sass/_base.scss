@@ -38,6 +38,13 @@ html{
 	font-family: $default-font;
 	font-size: 14px;
 }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body{
+	background-color: $brand-green;
+}
 
 *{
 	color: $brand-light-blue;

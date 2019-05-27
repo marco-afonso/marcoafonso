@@ -43,12 +43,12 @@ $(document).ready(
 
 		}, 2000);
 		anime({
-			targets: '.home-anim-appear',
-			translateY: [100,0],
+			targets: '.anim-appear',
+			translateY: [60,0],
 			opacity: [0, 1],
 			easing: 'easeOutQuad',
-			duration: 700,
-			delay: anime.stagger(300, {start: 500})
+			duration: 500,
+			delay: anime.stagger(200, {start: 100})
 		});
 	});
 
