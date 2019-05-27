@@ -50,6 +50,15 @@ $(document).ready(
 			duration: 500,
 			delay: anime.stagger(200, {start: 100})
 		});
+
+		var image = $("img[highres]");
+		image.one("load", function() {
+		  $(this).attr('src', $(this).attr('highres'));
+		}).each(function() {
+		  if(this.complete) {
+		      $(this).trigger('load');
+		  }
+		});
 	});
 
 function toggleMenu(){
