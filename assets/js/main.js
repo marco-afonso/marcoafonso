@@ -51,14 +51,7 @@ $(document).ready(
 			delay: anime.stagger(200, {start: 100})
 		});
 
-		var image = $("img[highres]");
-		image.one("load", function() {
-		  $(this).attr('src', $(this).attr('highres'));
-		}).each(function() {
-		  if(this.complete) {
-		      $(this).trigger('load');
-		  }
-		});
+		echo.init({offset: 100}); // init lazy loading img
 	});
 
 function toggleMenu(){
