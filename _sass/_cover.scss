@@ -4,31 +4,31 @@
 	margin: auto;
 	margin-top: 10px;
 	margin-bottom: 40px;
+	top: 5%;
+	float: left;
 	@media #{ $responsive-sm } {
-		top: 5%;
 		width: 70%;
-		float: left;
+	}
+	.cover-image-1{
+		position: relative;
+		top: 0;
+		width: 95%;
+		left: -5%;
+	}
+	.cover-image-2{
+		position: absolute;
+		width: 95%;
+		left: 20%;
 	}
 }
-.cover-image-1{
-	position: relative;
-	top: 0;
-	left: -5%;
-	width: 95%;
-}
-.cover-image-2{
-	position: absolute;
-	width: 95%;
-	left: 20%;
-}
+
 .cover-text{
-	width: 100%;
+	float: right;
+	width: auto;
 	clear: both;
 	@media #{ $responsive-sm } {
 		position: relative;
 		bottom: 15%;
 		width: 35%;
-		float: right;
 	}
 }
-

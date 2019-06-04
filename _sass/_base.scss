@@ -8,18 +8,6 @@ $brand-light-green: #B2C6A3;
 
 $text-body-color: mix($brand-light-blue, $brand-white, 75%);
 
-$responsive-xxs: "only screen and (min-width : 295px)";
-$responsive-xs: "only screen and (min-width : 576px)";
-$responsive-sm: "only screen and (min-width : 768px)";
-$responsive-md: "only screen and (min-width : 992px)";
-$responsive-lg: "only screen and (min-width : 1200px)";
-
-$responsive-up-to-xxs: "only screen and (max-width : 294px)";
-$responsive-up-to-xs: "only screen and (max-width : 479px)";
-$responsive-up-to-sm: "only screen and (max-width : 767px)";
-$responsive-up-to-md: "only screen and (max-width : 991px)";
-$responsive-up-to-lg: "only screen and (max-width : 1199px)";
-
 
 
 
@@ -48,10 +36,11 @@ body{
 
 *{
 	color: $brand-light-blue;
+	box-sizing: border-box;
 }
-
-.img-container {
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
+a{
+	text-decoration: none;
+}
+svg{
+	box-sizing: border-box !important;
 }

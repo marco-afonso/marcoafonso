@@ -51,7 +51,7 @@ $(document).ready(
 			delay: anime.stagger(200, {start: 100})
 		});
 
-		echo.init({offset: 100}); // init lazy loading img
+		echo.init({offset: 100, debounce: false}); // init lazy loading img
 	});
 
 function toggleMenu(){
@@ -90,4 +90,25 @@ function toggleMenu(){
 
 		});
 	}
+}
+
+// Set to the same value as the web property used on the site
+var gaProperty = 'UA-XXXX-Y';
+
+// Disable tracking if the opt-out cookie exists.
+var disableStr = 'ga-disable-' + gaProperty;
+if (document.cookie.indexOf(disableStr + '=true') > -1) {
+  window[disableStr] = true;
+}ß
+
+// Opt-out function
+function gaOptout() {
+  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+  window[disableStr] = true;
+  alert("You have successfully opted out of Google Analytics on the website.");
+}
+function gaOptin() {
+  document.cookie = disableStr + '=false; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+  window[disableStr] = true;
+  alert("You have successfully opted in again of Google Analytics on the website.");
 }

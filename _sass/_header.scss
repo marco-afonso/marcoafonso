@@ -29,10 +29,11 @@ header {
 	}
 	@media #{ $responsive-up-to-sm } /*IN DROPDOWN MENU*/ {
 		.open-menu-button{
-			display: block;
+			display: inline-block;
 			float: right;
 			height: 100px;
 			width: 60px;
+			margin: 0;
 			padding: 20px;
 		}
 		ul{

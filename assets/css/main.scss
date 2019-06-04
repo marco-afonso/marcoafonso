@@ -1,9 +1,12 @@
 ---
 ---
+@import 'vendor/vendor';
 @import 'reset';
 @import 'base';
+@import 'responsive';
 @import 'header';
 @import 'footer';
 @import 'site';
+
 /*SPECIFIC LAYOUTS*/
 @import 'cover';

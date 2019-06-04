@@ -1,0 +1,86 @@
+
+$breakpoint-xxs: 294px;
+$breakpoint-xs:  576px;
+$breakpoint-sm:  768px;
+$breakpoint-md:  992px;
+$breakpoint-lg:  1200px;
+
+$responsive-xxs: "only screen and (min-width : #{$breakpoint-xxs})";
+$responsive-xs:  "only screen and (min-width : #{$breakpoint-xs})";
+$responsive-sm:  "only screen and (min-width : #{$breakpoint-sm})";
+$responsive-md:  "only screen and (min-width : #{$breakpoint-md})";
+$responsive-lg:  "only screen and (min-width : #{$breakpoint-lg})";
+
+$responsive-up-to-xxs: "only screen and (max-width : #{$breakpoint-xxs - 1})";
+$responsive-up-to-xs: "only screen and (max-width : #{$breakpoint-xs - 1})";
+$responsive-up-to-sm: "only screen and (max-width : #{$breakpoint-sm - 1})";
+$responsive-up-to-md: "only screen and (max-width : #{$breakpoint-md - 1})";
+$responsive-up-to-lg: "only screen and (max-width : #{$breakpoint-lg - 1})";
+
+$container-padding: 30px;
+
+@mixin col($size){
+	width: percentage($size/12);
+	padding: 0;
+	margin: auto;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+.col-1{
+	@include col(1);
+}
+.col-2{
+	@include col(2);
+}
+.col-3{
+	@include col(3);
+}
+.col-4{
+	@include col(4);
+}
+.col-5{
+	@include col(5);
+}
+.col-6{
+	@include col(6);
+}
+.col-7{
+	@include col(7);
+}
+.col-8{
+	@include col(8);
+}
+.col-9{
+	@include col(9);
+}
+.col-10{
+	@include col(10);
+}
+.col-11{
+	@include col(11);
+}
+.col-12, .col{
+	@include col(12);
+}
+.container{
+	box-sizing: border-box;
+	padding: 0 $container-padding;
+	margin: auto;
+	clear: both;
+	@media #{ $responsive-up-to-xs } {
+		width: 100%;
+	}
+	@media #{ $responsive-xs } {
+		width: $breakpoint-xs;
+	}
+	@media #{ $responsive-sm } {
+		width: $breakpoint-sm;
+	}
+	@media #{ $responsive-md } {
+		width: $breakpoint-md;
+	}
+	@media #{ $responsive-lg } {
+		width: $breakpoint-lg;
+	}
+}
