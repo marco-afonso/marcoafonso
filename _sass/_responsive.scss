@@ -22,7 +22,7 @@ $container-padding: 30px;
 @mixin col($size){
 	width: percentage($size/12);
 	padding: 0;
-	margin: auto;
+	margin: 0 auto;
 	box-sizing: border-box;
 	display: inline-block;
 }
@@ -66,8 +66,9 @@ $container-padding: 30px;
 .container{
 	box-sizing: border-box;
 	padding: 0 $container-padding;
-	margin: auto;
+	margin: 0 auto;
 	clear: both;
+	text-align: center;
 	@media #{ $responsive-up-to-xs } {
 		width: 100%;
 	}
