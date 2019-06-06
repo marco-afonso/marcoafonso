@@ -1,12 +1,17 @@
-$(document).ready(
-	function(){
-		var header = $("header");
-		header.find("ul").addClass("header-menu");
-		header.find("li").addClass("header-menu-item");
-		var pageFrame = $(".page-frame").toArray();
-		var headerLogo = header.find(".header-logo").toArray();
-		var headerMenuItem = header.find(".header-menu-item").toArray();
-		var openMenuButton = header.find(".open-menu-button").toArray();
+---
+---
+'use strict'
+
+{% include js/anime.min.js %}
+{% include js/echo.min.js %}
+
+document.addEventListener("DOMContentLoaded", function() {
+		var header = t('header')[0];
+		var pageFrame = c("page-frame")[0];
+		var pageContent = fC("page-body-content", pageFrame)[0];
+		var headerLogo = fC('header-logo', header);
+		var headerMenuItem = fT('li', header);
+		var openMenuButton = fC('open-menu-button', header)[0];
 		anime({
 			targets: pageFrame,
 			opacity: [0.3, 1],
@@ -23,25 +28,12 @@ $(document).ready(
 			delay: anime.stagger(60, {start: 50})
 		});
 		anime({
-			targets: ".page-body-content",
+			targets: pageContent,
 			translateY: [40, 0],
 			opacity: [0, 1],
 			duration: 600,
 			easing: 'easeOutCubic'
 		});
-		anime({
-			targets: '.triangle-wrapper',
-			scaleY: [0,1],
-			easing: 'easeInOutQuint',
-			duration: 1500
-		});
-		setTimeout(function(){
-			$(pageFrame).removeAttr('style');
-			$(headerLogo).removeAttr('style');
-			$(headerMenuItem).removeAttr('style');
-			$(openMenuButton).removeAttr('style');
-
-		}, 2000);
 		anime({
 			targets: '.anim-appear',
 			translateY: [60,0],
@@ -50,24 +42,31 @@ $(document).ready(
 			duration: 500,
 			delay: anime.stagger(200, {start: 100})
 		});
+		anime({
+			targets: '.triangle-wrapper',
+			scaleY: [0,1],
+			easing: 'easeInOutQuint',
+			duration: 1500
+		});
+
 
 		echo.init({offset: 100, debounce: false}); // init lazy loading img
 	});
 
 function toggleMenu(){
-	var ul = $(".header-menu");
-	var li = $(ul).find("li");
-	if(!ul.hasClass("opened")){
-		ul.addClass("opened");
+	var ul = c("header-menu")[0];
+	var li = fC('li', ul);
+	if(!ul.classList.contains("opened")){
+		ul.classList.add("opened");
 		anime({
-			targets: ul.toArray(),
+			targets: ul,
 			translateY: [-100, 0],
 			easing: 'easeOutBack',
 			opacity: [0, 1],
 			duration: 200
 		});
 		anime({
-			targets: li.toArray(),
+			targets: li,
 			scale: [0.5,1],
 			duration: 250,
 			easing: 'easeOutBack',
@@ -76,15 +75,15 @@ function toggleMenu(){
 		});
 	}else{
 		anime({
-			targets: ul.toArray(),
+			targets: ul,
 			translateY: [0, -100],
 			easing: 'easeInBack',
 			opacity: [1, 0],
 			duration: 80,
 			changeComplete: function(anim){
-				ul.removeClass("opened");
-				ul.css({opacity: 1});
-				anime.set(ul.toArray(), {translateY: 0});
+				ul.classList.remove("opened");
+				anime.set(ul, {opacity: 1});
+				anime.set(ul, {translateY: 0});
 				
 			}
 
@@ -99,7 +98,7 @@ var gaProperty = 'UA-XXXX-Y';
 var disableStr = 'ga-disable-' + gaProperty;
 if (document.cookie.indexOf(disableStr + '=true') > -1) {
   window[disableStr] = true;
-}ß
+}
 
 // Opt-out function
 function gaOptout() {
@@ -111,4 +110,22 @@ function gaOptin() {
   document.cookie = disableStr + '=false; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
   window[disableStr] = true;
   alert("You have successfully opted in again of Google Analytics on the website.");
+}
+//helper functions
+function c(className){
+	return document.getElementsByClassName(className);
+}
+function fC(className, obj){
+	return obj.getElementsByClassName(className);
+}
+function t(tagName){
+	return document.getElementsByTagName(tagName);
+}
+function fT(tagName, obj){
+	return obj.getElementsByTagName(tagName);
+}
+function forEach(arr, func){
+	for (var i = 0, len = arr.length; i < len; i++) {
+	  func(arr[i]);
+	}
 }
