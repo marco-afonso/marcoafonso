@@ -1,34 +1,39 @@
-.cover-image-wrapper{
-	position: relative;
-	width: 85%;
-	margin: auto;
-	margin-top: 10px;
-	margin-bottom: 40px;
-	top: 5%;
-	float: left;
-	@media #{ $responsive-sm } {
-		width: 70%;
-	}
-	.cover-image-1{
+.cover {
+	max-width: $breakpoint-sm;
+	margin: 0 auto;
+	.cover-image-wrapper {
 		position: relative;
-		top: 0;
-		width: 95%;
-		left: -5%;
+		@media #{ $responsive-up-to-sm } {
+			width: 85%;
+			margin-left: auto;
+		}
+		margin-right: auto;
+		margin-top: 10px;
+		margin-bottom: 40px;
+		top: 5%;
+		@media #{ $responsive-sm } {
+			width: 70%;
+		}
+		.cover-image-1{
+			position: relative;
+			top: 0;
+			width: 95%;
+			left: -5%;
+		}
+		.cover-image-2{
+			position: absolute;
+			width: 95%;
+			left: 20%;
+		}
 	}
-	.cover-image-2{
-		position: absolute;
-		width: 95%;
-		left: 20%;
-	}
-}
 
-.cover-text{
-	float: right;
-	width: auto;
-	clear: both;
-	@media #{ $responsive-sm } {
-		position: relative;
-		bottom: 15%;
-		width: 35%;
+	.cover-text{
+		width: auto;
+		margin-left: auto;
+		@media #{ $responsive-sm } {
+			position: relative;
+			bottom: 120px;
+			width: 35%;
+		}
 	}
 }

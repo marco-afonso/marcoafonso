@@ -1,4 +1,11 @@
-
+.cover-page-frame{
+	@media #{ $responsive-md } {
+		header {
+			padding-top: 25px;
+			height: 150px;
+		}
+	}
+}
 
 header {
 	position:relative;
@@ -32,9 +39,10 @@ header {
 			display: inline-block;
 			float: right;
 			height: 100px;
-			width: 60px;
+			width: 30px;
 			margin: 0;
-			padding: 20px;
+			padding: 20px 10px;
+			padding-left: 0;
 		}
 		ul{
 			
@@ -74,7 +82,7 @@ header {
 		}
 		img{
 			position: relative;
-			left: -5px;
+			left: -15px;
 			height: 65px;
 			margin-top: 15px;
 			display: inline-block;
@@ -85,6 +93,7 @@ header {
 			display: inline-block;
 			position: relative;
 			bottom: 35px;
+			left: -5px;
 			font-size: inherit;
 			color: $brand-white;
 			margin: 0;
