@@ -36,6 +36,7 @@ linkedin: https://www.linkedin.com/in/marcoafonsoinfo/
 behance:  https://www.behance.net/marcoafonso
 
 # Build settings
+destination: docs
 markdown: kramdown
 plugins:
   - jekyll-feed
