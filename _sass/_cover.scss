@@ -1,18 +1,28 @@
 .cover {
-	max-width: $breakpoint-sm;
-	margin: 0 auto;
-	.cover-image-wrapper {
+	@media #{ $responsive-sm } {
 		position: relative;
-		@media #{ $responsive-up-to-sm } {
-			width: 85%;
-			margin-left: auto;
+		margin-bottom: 20px;
+		height: calc(100vh - 200px);
+		min-height: 500px;
+		max-height: 800px;
+	}
+	.cover-image-wrapper {
+		@media #{ $responsive-up-to-xs }{
+			width: 90%;
 		}
-		margin-right: auto;
-		margin-top: 10px;
-		margin-bottom: 40px;
-		top: 5%;
+		width: 80%;
+		margin: 20px auto;
+		position: relative;
 		@media #{ $responsive-sm } {
-			width: 70%;
+			margin: 0;
+			top: 30%;
+			transform: translateY(-30%);
+			width: 65%;
+		}
+		@media #{ $responsive-md } {
+			top: 50%;
+			transform: translateY(-50%);
+			width: 55%;
 		}
 		.cover-image-1{
 			position: relative;
@@ -28,12 +38,44 @@
 	}
 
 	.cover-text{
-		width: auto;
-		margin-left: auto;
 		@media #{ $responsive-sm } {
-			position: relative;
-			bottom: 120px;
-			width: 35%;
+			width: 30%;
+			position: absolute;
+			top: 60%;
+			right: 0;
+		}
+		@media #{ $responsive-md } {
+			width: 30%;
+			top: 50%;
 		}
 	}
+}
+
+
+
+
+
+.background-triangle{
+	position: absolute;
+	top: -0.5px;
+	left: 0;
+	width: 100%;
+	min-height: 400px;
+	@media #{ $responsive-up-to-sm } {
+		min-height: 100px;
+		max-height: 400px; 
+		height: 70vw;
+	}
+
+	max-height: 700px;
+	height: calc(100vh - 300px);
+	fill: $brand-light-blue;
+
+
+}
+.triangle-wrapper{
+	position: relative;
+	height: 0;
+	overflow: visible;
+	width: 100vw;
 }

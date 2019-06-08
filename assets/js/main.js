@@ -5,6 +5,28 @@
 {% include js/anime.min.js %}
 {% include js/echo.min.js %}
 
+//helper functions
+function c(className){
+	return document.getElementsByClassName(className);
+}
+function fC(className, obj){
+	return obj.getElementsByClassName(className);
+}
+function t(tagName){
+	return document.getElementsByTagName(tagName);
+}
+function fT(tagName, obj){
+	return obj.getElementsByTagName(tagName);
+}
+function forEach(arr, func){
+	for (var i = 0, len = arr.length; i < len; i++) {
+	  func(arr[i]);
+	}
+}
+
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
 		var header = t('header')[0];
 		var pageFrame = c("page-frame")[0];
@@ -12,9 +34,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		var headerLogo = fC('header-logo', header);
 		var headerMenuItem = fT('li', header);
 		var openMenuButton = fC('open-menu-button', header)[0];
+
+		var coverPageFrame = c('cover-page-frame');
+		var startTime = 100;
+		if(coverPageFrame.length > 0){
+			startTime = 1000;
+		}
+
 		anime({
 			targets: pageFrame,
-			opacity: [0.3, 1],
+			opacity: [0, 1],
 			duration: 200,
 			delay: 0,
 			easing: 'easeOutQuad'
@@ -25,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			opacity: [0, 1],
 			duration: 600,
 			easing: 'easeOutBack',
-			delay: anime.stagger(60, {start: 50})
+			delay: anime.stagger(60, {start: startTime})
 		});
 		anime({
 			targets: pageContent,
@@ -40,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			opacity: [0, 1],
 			easing: 'easeOutQuad',
 			duration: 500,
-			delay: anime.stagger(200, {start: 100})
+			delay: anime.stagger(200, {start: startTime})
 		});
 		anime({
 			targets: '.triangle-wrapper',
@@ -111,21 +140,4 @@ function gaOptin() {
   window[disableStr] = true;
   alert("You have successfully opted in again of Google Analytics on the website.");
 }
-//helper functions
-function c(className){
-	return document.getElementsByClassName(className);
-}
-function fC(className, obj){
-	return obj.getElementsByClassName(className);
-}
-function t(tagName){
-	return document.getElementsByTagName(tagName);
-}
-function fT(tagName, obj){
-	return obj.getElementsByTagName(tagName);
-}
-function forEach(arr, func){
-	for (var i = 0, len = arr.length; i < len; i++) {
-	  func(arr[i]);
-	}
-}
+
