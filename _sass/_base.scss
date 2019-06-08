@@ -15,8 +15,8 @@ $text-body-color: mix($brand-light-blue, $brand-white, 75%);
 @font-face {
   	font-family: 'MarkSans';
 	src: 
-		url('../fonts/marksans.woff2') format('woff2'),
-       	url('../fonts/marksans.ttf') format('truetype');
+		url('/assets/fonts/marksans.woff2') format('woff2'),
+       	url('/assets/fonts/marksans.ttf') format('truetype');
 	font-weight: normal;
     font-style: normal;
 
